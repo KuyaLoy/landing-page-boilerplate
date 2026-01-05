@@ -67,7 +67,7 @@ try {
   $to       = $admin_email;
   $subject  = "New Loan Request from $full_name";
   $year     = date('Y');
-  $logoUrl  = $baseUrl . '/assets/images/logo.png';
+  $logoUrl  = $baseUrl . 'assets/images/logo.png';
   $siteName = $site;
 
   $html = <<<HTML
@@ -231,7 +231,7 @@ HTML;
   if (!empty($bcc_email)) $headers .= "Bcc: {$bcc_email}\r\n";
 
   if (mail($to, $subject, $html, $headers)) {
-    header('Location: ./../thankyou.php');
+    header('Location: ' . $baseUrl . 'thankyou.php');
     exit;
   } else {
     throw new Exception('Failed to send. Please try again later.');

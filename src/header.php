@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <!-- Base URL (auto-detects root or subfolder) -->
+  <base href="<?= $baseUrl ?>">
+
   <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,9 +49,9 @@
   <!-- Critical Inline CSS: reset, fonts, critical (nav to hero) -->
   <style>
     <?php
-    include('assets/css/min/reset.min.css');
-    include('assets/css/min/fonts.min.css');
-    include('assets/css/min/critical.min.css');
+    include(__DIR__ . '/../assets/css/min/reset.min.css');
+    include(__DIR__ . '/../assets/css/min/fonts.min.css');
+    include(__DIR__ . '/../assets/css/min/critical.min.css');
     ?>
   </style>
 

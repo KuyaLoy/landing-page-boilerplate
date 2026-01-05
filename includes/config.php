@@ -19,8 +19,12 @@ $site = "";
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
 $host     = $_SERVER['HTTP_HOST'];
 
-// Base URLs
-$site_url = $protocol . '://' . $host . '/';
+// Auto-detect subfolder path (works for root domain AND subfolders)
+$scriptDir = dirname($_SERVER['SCRIPT_NAME']);
+$basePath  = ($scriptDir === '/' || $scriptDir === '\\') ? '/' : rtrim($scriptDir, '/\\') . '/';
+
+// Base URLs (auto-detects if in subfolder)
+$site_url = $protocol . '://' . $host . $basePath;
 $baseUrl  = $site_url;
 
 // Meta & contact info

@@ -91,7 +91,7 @@
   <script src="assets/js/vendor/aos.js?v=<?= $jscssverion; ?>" defer></script>
   <script src="assets/js/script.js?v=<?= $jscssverion; ?>" defer></script>
 
-  <?php if (file_exists('assets/js/edit.js') && filesize('assets/js/edit.js') > 0): ?>
+  <?php if (file_exists(__DIR__ . '/../assets/js/edit.js') && filesize(__DIR__ . '/../assets/js/edit.js') > 0): ?>
       <script src="assets/js/edit.js?v=<?= $jscssverion; ?>" defer></script>
   <?php endif; ?>
 
