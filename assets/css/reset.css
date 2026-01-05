@@ -1,0 +1,116 @@
+/* === GENERAL RESET === */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #000;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+button,
+[role=button] {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+:where(input, textarea)::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.7;
+}
+
+:where(input, textarea):-ms-input-placeholder {
+  color: inherit;
+  opacity: 0.7;
+}
+
+:where(input, textarea)::-moz-placeholder {
+  color: inherit;
+  opacity: 0.7;
+}
+
+:where(input, textarea)::-ms-input-placeholder {
+  color: inherit;
+  opacity: 0.7;
+}
+
+:where(input, textarea)::placeholder {
+  color: inherit;
+  opacity: 0.7;
+}
